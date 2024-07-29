@@ -309,42 +309,17 @@ return [
         [
             'text' => 'User Management',
             'icon' => 'fas fa-fw fa-users',
+            'can' => 'user-management',
             'submenu' => [
                 [
-                    'text' => 'Create',
-                    'icon' => 'fas fa-fw fa-plus',
-                    'url' => '#',
-                ],
-                [
-                    'text' => 'Update',
-                    'icon' => 'fas fa-fw fa-edit',
-                    'url' => '#',
-                ],
-                [
-                    'text' => 'Delete',
-                    'icon' => 'fas fa-fw fa-trash',
-                    'url' => '#',
+                    'text' => 'Users',
+                    'icon' => 'fas fa-fw fa-users',
+                    'route' => 'users.index',
                 ],
                 [
                     'text' => 'Permissions',
                     'icon' => 'fas fa-fw fa-lock',
-                    'submenu' => [
-                        [
-                            'text' => 'Create Permissions',
-                            'icon' => 'fas fa-fw fa-plus',
-                            'url' => '',
-                        ],
-                        [
-                            'text' => 'Update Permissions',
-                            'icon' => 'fas fa-fw fa-edit',
-                            'url' => '',
-                        ],
-                        [
-                            'text' => 'Delete Permissions',
-                            'icon' => 'fas fa-fw fa-trash',
-                            'url' => '',
-                        ],
-                ]
+                    'route' => 'permissions.index',
                 ],
             ],
         ],
