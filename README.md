@@ -10,8 +10,8 @@ Follow the steps below to set up the project:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/your-repository.git
-   cd your-repository
+   git clone https://github.com/celiclazar/data-import-portal.git
+   cd data-import-portal
     ```
 2. **Copy the .env.example file to .env:**
    ```bash
