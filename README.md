@@ -48,6 +48,9 @@ php artisan serve
 ## Test Users
 Two test users are created during the seeding process. Their credentials can be found in the UsersSeeder class.
 
+## Test Files
+Sample CSV and XLSX files for testing the import functionality are provided in the test_files directory.
+
 ## Screenshots
 ![img_4.png](img_4.png)
 ![img.png](img.png)
