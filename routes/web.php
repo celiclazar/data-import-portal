@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\DataImportController;
+use App\Http\Controllers\DataViewController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -28,3 +30,13 @@ Route::middleware(['auth', 'can:user-management'])->group(function () {
     Route::get('permissions/{permission}/assign', [PermissionController::class, 'assign'])->name('permissions.assign');
     Route::post('permissions/{permission}/assign', [PermissionController::class, 'assignStore'])->name('permissions.assignStore');
 });
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/data-import', [DataImportController::class, 'index'])->name('data-import.index');
+    Route::post('/data-import/{type}', [DataImportController::class, 'import'])->name('data-import.perform');
+    Route::get('data/view/{id}', [DataViewController::class, 'view'])->name('data.view');
+    Route::delete('data/delete/{id}/{type}', [DataViewController::class, 'delete'])->name('data.delete');
+    Route::get('data/export/{id}', [DataViewController::class, 'export'])->name('data.export');
+});
+
+
