@@ -1077,9 +1077,9 @@ function setupEventListeners(reference, options, state, updateBound) {
 }
 
 // This is here just for backward compatibility with versions lower than v1.10.3
-// you should import the utilities using named exports, if you want them all use:
+// you should data-import the utilities using named exports, if you want them all use:
 // ```
-// import * as PopperUtils from 'popper-utils';
+// data-import * as PopperUtils from 'popper-utils';
 // ```
 // The default export will be removed in the next major version.
 var index = {

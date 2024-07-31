@@ -257,7 +257,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'admin',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -327,22 +327,9 @@ return [
         [
             'text' => 'Data Import',
             'icon' => 'far fa-clone',
-            'url' => '#',
-        ],
-        [
-            'text' => 'Imported Data',
-            'icon' => 'fas fa-chart-line',
-            'url' => '#',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url' => '#',
-                ],
-                [
-                    'text' => 'level_one',
-                    'url' => '#',
-                ],
-            ],
+            'route' => 'data-import.index',
+            'key' => 'dataImport',
+            'can' => ['import-orders', 'import-customer-data', 'import-inventory-data'],
         ],
     ],
 
